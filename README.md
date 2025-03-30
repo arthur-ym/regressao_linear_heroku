@@ -14,8 +14,9 @@ A API recebe dados via requisições HTTP **POST**, processa as entradas e retor
 ## 📂 **Estrutura do Projeto**
 📁 `regressao-linear/`  
 ├── 📄 `inference.py` → Código principal da API Flask, faz a inferencia do modelo  
-├── 📄 `model.py` → Script para treinar e salvar o modelo de regressão linear, modelo simples para simplificar a requisição.
+├── 📄 `model.py` → Script para treinar e salvar o modelo, modelo simples para simplificar a requisição.
 ├── 📄 `test_api.py` → Script para testar a API fazendo requisições HTTP, precisa do conteiner docker rodando.
+
 ├── 📄 `requirements.txt` → Lista de bibliotecas necessárias para rodar o projeto.  
 ├── 📄 `Dockerfile` → Configuração para construir a imagem Docker da API.  
 └── 📄 `README.md` → Documentação do projeto.  
