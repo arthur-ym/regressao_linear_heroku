@@ -1,0 +1,20 @@
+# Usar uma imagem base com Python
+FROM python:3.9
+
+# Definir o diretório de trabalho dentro do container
+WORKDIR /app
+
+# Copiar os arquivos para o container
+COPY model.py inference.py requirements.txt /app/
+
+# Instalar as dependências
+RUN pip install -r requirements.txt
+
+# Rodar o script para treinar o modelo antes de iniciar o servidor
+RUN python model.py
+
+# Expor a porta 5000
+EXPOSE 5000
+
+# Definir o comando para iniciar a API Flask
+CMD ["python", "inference.py"]
