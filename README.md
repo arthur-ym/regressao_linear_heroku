@@ -43,7 +43,7 @@ com "test-aym-dev" sendo o nome do app criado, para reproduzir, basta mudar para
 
 No momento minha aplicação esta offline para nao gerar custos.
 
-## 📂 **Descrição do Serviço**
+## **Descrição do Serviço**
 
 1. Serviço: Previsão de Regressão Linear
 Endpoint: /predict
