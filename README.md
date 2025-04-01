@@ -29,6 +29,7 @@ Significa:
 "Usamos o Gunicorn para rodar a aplicação Flask (app) do arquivo app.py como um servidor web."
 
 Para hostear o app na plataforma é necessário rodar:
+
 heroku container:login
 
 docker build -t registry.heroku.com/test-aym-dev/web .
