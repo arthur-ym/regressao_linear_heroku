@@ -1,5 +1,5 @@
 # Usar uma imagem base com Python
-FROM python:3.9
+FROM python:3.10-slim
 
 # Definir o diretório de trabalho dentro do container
 WORKDIR /app
@@ -17,4 +17,4 @@ RUN python model.py
 EXPOSE 5000
 
 # Definir o comando para iniciar a API Flask
-CMD ["python", "inference.py"]
+ENTRYPOINT ["python", "inference.py"]

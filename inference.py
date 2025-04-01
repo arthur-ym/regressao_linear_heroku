@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify  
 import joblib  
 import numpy as np 
+import os
 
 # Inicializa a aplicação Flask
 app = Flask(__name__)
@@ -30,5 +31,5 @@ def predict():
 
 # Inicia o servidor Flask
 if __name__ == "__main__":
-    # Define o host como "0.0.0.0" para permitir acesso via Docker e a porta como 5000
-    app.run(host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 5000))  # Pega a porta do ambiente no Heroku
+    app.run(host="0.0.0.0", port=port)
