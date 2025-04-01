@@ -75,7 +75,8 @@ json
   "prediction": [10.1, 25.3, 50.4]
 }
 
-Fluxo do Serviço:
+**Fluxo do Serviço**:
+
 O cliente faz uma requisição HTTP POST para o endpoint /predict com os dados de entrada no formato JSON.
 
 O Flask recebe esses dados e os passa para o modelo de regressão linear para calcular as previsões.
