@@ -1,7 +1,7 @@
 import requests
 
 # URL do endpoint da API
-API_URL = "http://localhost:5000/predict"
+API_URL = "https://test-aym-dev-be5a9d8cc90f.herokuapp.com/"
 
 # Dados de entrada para teste
 data = {"X": [2, 5, 10]}
