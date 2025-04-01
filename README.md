@@ -6,9 +6,10 @@ A aplicação é armazenada e hosteada com auxílio do site Heroku para que se p
 
 ---
 
-## 🚀 **Repositórios**
-- **GitHub:** [arthur-ym/heroku](https://github.com/arthur-ym/regressao-linear)  
-
+## 🚀 **Links**
+- **GitHub:** [arthur-ym/regressao_linear_heroku](https://github.com/arthur-ym/regressao_linear_heroku)  
+- **Host da Aplicação** [host](https://test-aym-dev-be5a9d8cc90f.herokuapp.com/predict) 
+![alt text](image.png)
 ---
 
 ## 📂 **Estrutura do Projeto**
