@@ -30,9 +30,14 @@ Significa:
 
 Para hostear o app na plataforma é necessário rodar:
 heroku container:login
+
 docker build -t registry.heroku.com/test-aym-dev/web .
+
 docker push registry.heroku.com/test-aym-dev/web
+
 heroku container:release web --app test-aym-dev
 
+
 com "test-aym-dev" sendo o nome do app criado, para reproduzir, basta mudar para um nome de seu app.
+
 No momento minha aplicação esta offline para nao gerar custos.
