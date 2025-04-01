@@ -42,3 +42,42 @@ heroku container:release web --app test-aym-dev
 com "test-aym-dev" sendo o nome do app criado, para reproduzir, basta mudar para um nome de seu app.
 
 No momento minha aplicação esta offline para nao gerar custos.
+
+## 📂 **Descrição do Serviço**
+
+1. Serviço: Previsão de Regressão Linear
+Endpoint: /predict
+Método HTTP: POST
+
+Descrição do Serviço:
+Este serviço recebe dados de entrada (valores numéricos) através de uma requisição HTTP POST, executa uma previsão utilizando um modelo de regressão linear previamente treinado e retorna o resultado dessa previsão.
+
+Parâmetros de Entrada:
+A entrada é esperada no formato JSON e deve conter um array com os valores numéricos sobre os quais a previsão será feita.
+
+Formato esperado: Um objeto JSON com o campo "X", que deve ser um array de números (pode ser de tamanho variável, dependendo da aplicação).
+
+Exemplo de requisição de entrada (JSON):
+json
+{
+  "X": [2, 5, 10]
+}
+O campo X contém uma lista de valores numéricos para os quais a previsão será feita. Nesse exemplo, o modelo fará uma previsão para três valores: 2, 5 e 10.
+
+Parâmetros de Saída:
+A resposta do serviço será retornada no formato JSON. O campo prediction conterá a previsão realizada pelo modelo de regressão linear para os valores de entrada.
+Formato esperado: Um objeto JSON contendo um campo "prediction", que será um array de números (resultados das previsões).
+
+Exemplo de resposta de saída (JSON):
+json
+
+{
+  "prediction": [10.1, 25.3, 50.4]
+}
+
+Fluxo do Serviço:
+O cliente faz uma requisição HTTP POST para o endpoint /predict com os dados de entrada no formato JSON.
+
+O Flask recebe esses dados e os passa para o modelo de regressão linear para calcular as previsões.
+
+O Flask retorna uma resposta com os resultados das previsões, que são enviados de volta ao cliente no formato JSON.
